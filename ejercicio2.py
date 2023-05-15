@@ -2,4 +2,7 @@
 # parámetro e imprima un saludo personalizado.
 
 def saludo(nombre):
-    print(f"Hola {nombre}, como fue tu dia")
+    print(f"Hola {nombre}, ¿como fue tu dia?")
+
+
+saludo("Miguel")
