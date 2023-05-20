@@ -1,4 +1,4 @@
-# lista de nombres :
+# lista de nombres:
 # Mauricio Iván Stalcar
 # Ebrain Ramirez Figueroa
 # Valeria Margarita Nuñez
@@ -7,6 +7,7 @@
 # Arrejin, Nicolas Miguel
 # Braian Maximiliano Diaz Juarez
 # Mario Rodriguez
+# Bastiani Alberto Fabian
 
 def menu():
         print("MENU DE INMUEBLES")
