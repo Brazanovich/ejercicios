@@ -102,28 +102,35 @@ def ver_lista():
         print("Indice: ", index, "Value: ", value)
     input("Enter para volver atras.")
 
-#LISTA DE PRECIOS
-# def lista_precios(plata, lista):
-#     precioFinal = []
-#     precioLista = lista
-#     for item in precioLista:
-#         metros = item["metros"]*100
-#         habitaciones = item["habitaciones"]*500
-#         garaje = 0
-#         if item["garaje"]:
-#             garaje = 1500
-#         if item["zona"] == "A":
-#             item["precio"] = metros+habitaciones+garaje
-#         elif item["zona"] == "B":
-#             item["precio"] = (metros+habitaciones+garaje)*1.5
-#         elif item["zona"] == "C":
-#             item["precio"] = (metros+habitaciones+garaje)*2
-#     for item in precioLista:
-#         if item["estado"]!="Vendido" and item["precio"] < plata:
-#             precioFinal.append(item)
-#     for index, item in enumerate(precioFinal):
-#         print("Indice: ", index, "item: ", item)
-#     input("Enter para continuar")
+# LISTA DE PRECIOS
+def lista_precios(plata, lista):
+    precioFinal = []
+    precioLista = lista
+
+    for item in precioLista:
+        metros = item["metros"]*100
+        habitaciones = item["habitaciones"]*500
+        garaje = 0
+        if item["garaje"]:
+            garaje = 1500
+        if item["zona"] == "A":
+            item["precio"] = metros+habitaciones+garaje
+        elif item["zona"] == "B":
+            item["precio"] = (metros+habitaciones+garaje)*1.5
+        elif item["zona"] == "C":
+            item["precio"] = (metros+habitaciones+garaje)*2
+    # 
+    for item in precioLista:
+        if item["estado"]!="Vendido" and item["precio"] < plata:
+            precioFinal.append(item)
+    # 
+    for index, item in enumerate(precioFinal):
+        print("Indice: ", index, "item: ", item)
+
+    if len(precioFinal) == 0:
+        print("No te podés comprar nada")
+
+    input("Enter para continuar")
 
 
 #LISTA DE PROPIEDADES/INMUEBLES        
